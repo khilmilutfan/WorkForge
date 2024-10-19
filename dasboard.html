@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/dasboard.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dasboard-WorkForge</title>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <span class="logo_name">Work<span>Forge</span></span>
+      </div>
+      <ul class="nav-links">
+		<li>
+			<a href="../WorkForge/dasboard.html" class="active">
+			   <i class="bx bx-tachometer"></i>
+			   <span class="links_name">Dashboard</span>
+			</a>
+		 </li>
+		 <li>
+			<a href="../WorkForge/daftar lowongan/daftar.html">
+			   <i class="bx bx-detail""></i>
+			   <span class="links_name">Daftar lowongan</span>
+			</a>
+		 </li>
+		 <li>
+			<a href="../WorkForge/tips loker/tips.html">
+			   <i class="bx bx-book"></i>
+			   <span class="links_name">Tips loker</span>
+			</a>
+		 </li>    
+	  <li>
+		<a href="../WorkForge/index.html">
+		  <i class="bx bx-log-out-circle"></i>
+		  <span class="links_name">Log out</span>
+		</a>
+	  </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <nav>
+        <div class="sidebar-button">
+          <i class="bx bx-menu sidebarBtn"></i>
+        </div>
+        <div class="profile-details">
+          <span class="admin_name">WorkForge admin</span>
+        </div>
+      </nav>
+      <div class="home-content">
+        <h1>hai admin, selamat datang kembali!!</h1>
+      </div>
+    </section>
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function () {
+        sidebar.classList.toggle("active");
+        if (sidebar.classList.contains("active")) {
+          sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+      };
+    </script>
+  </body>
+</html>

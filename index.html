@@ -2,69 +2,79 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css/dasboard.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-      rel="stylesheet"
-    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dasboard-WorkForge</title>
+    <title>WorkForge</title>
+    <link rel="stylesheet" href="css/beranda.css" />
   </head>
-
   <body>
-    <div class="sidebar">
-      <div class="logo-details">
-        <span class="logo_name">Work<span>Forge</span></span>
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Work<span>Forge</span>.</a>
+
+      <div class="navbar-nav">
+        <a href="#beranda">Beranda</a>
+        <a href="#pasanglowongankerja">Pasang Lowongan Kerja</a>
+        <a href="#carilowongankerja">Cari Lowongan Kerja</a>
+        <a href="#tipsloker">Tips Loker</a>
       </div>
-      <ul class="nav-links">
-		<li>
-			<a href="../WorkForge/dasboard.html" class="active">
-			   <i class="bx bx-tachometer"></i>
-			   <span class="links_name">Dashboard</span>
-			</a>
-		 </li>
-		 <li>
-			<a href="../WorkForge/daftar lowongan/daftar.html">
-			   <i class="bx bx-detail""></i>
-			   <span class="links_name">Daftar lowongan</span>
-			</a>
-		 </li>
-		 <li>
-			<a href="../WorkForge/tips loker/tips.html">
-			   <i class="bx bx-book"></i>
-			   <span class="links_name">Tips loker</span>
-			</a>
-		 </li>    
-	  <li>
-		<a href="../WorkForge/index.html">
-		  <i class="bx bx-log-out-circle"></i>
-		  <span class="links_name">Log out</span>
-		</a>
-	  </li>
+      <div class="navbar-buttons">
+        <button class="login">
+          <a href="login.html">Login</a>
+        </button>
+        <button class="register">
+          <a href="register.html">Register</a>
+      </button>      
+    </nav>
+    <div class="container">
+      <section class="hero" id="beranda">
+        <main class="hero">
+          <div class="content">
+            <h1>Cari Lowongan kerja?</h1>
+            <p>Tenang saja, Temukan Pekerjaan Yang</p>
+            <p>anda Sukai Dengan WorkForge.</p>
+            <div class="search-container">
+              <input
+                type="text"
+                placeholder="masukkan posisi pekerjaan yang ingin dicari"
+              />
+              <input
+                type="text"
+                placeholder="masukkan lokasi yang ingin dicari"
+              />
+              <button>Search</button>
+            </div>
+          </div>
+        </main>
+      </section>
+    </div>
+    <div>
+    <div class="jelajahi">
+      <ul style="list-style-type: none;">
+        <li><h2>jelajahi peluang kerja</h2></li>
       </ul>
     </div>
-    <section class="home-section">
-      <nav>
-        <div class="sidebar-button">
-          <i class="bx bx-menu sidebarBtn"></i>
-        </div>
-        <div class="profile-details">
-          <span class="admin_name">WorkForge admin</span>
-        </div>
-      </nav>
-      <div class="home-content">
-        <h1>hai admin, selamat datang kembali!!</h1>
-      </div>
-    </section>
-    <script>
-      let sidebar = document.querySelector(".sidebar");
-      let sidebarBtn = document.querySelector(".sidebarBtn");
-      sidebarBtn.onclick = function () {
-        sidebar.classList.toggle("active");
-        if (sidebar.classList.contains("active")) {
-          sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
-        } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
-      };
-    </script>
+    <div class="fotter">
+      <ul>
+        <li>lokasi populer</li>
+        <li>
+          Bandung,Jakarta,Kediri,Surabaya,<br />Mojokrto,Bekasi,Bogor,Bali,Medan,Jogja
+        </li>
+        <li>Lihat semua lokasi -></li>
+      </ul>
+      <ul>
+        <li>Kategori populer</li>
+        <li>
+          Programming,Akutansi,Marketing,<br />Kontruksi,Human
+          recources,Administrasi,Teknik
+        </li>
+        <li>LIhat semua kategori-></li>
+      </ul>
+      <ul>
+        <li>Tipe pekerjaan</li>
+        <li>
+          Fresh graduate,Frelance,Magang,Super viso<br />Manajer,Sarjana,Diploma,SMA/SMK/STM
+        </li>
+        <li>LIhat semua lokasi-></li>
+      </ul>
+    </div>
   </body>
 </html>
