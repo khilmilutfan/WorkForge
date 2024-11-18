@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cari Lowongan Kerja - WorkForge</title>
+  <link rel="stylesheet" href="css/carilowongankerja.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#" class="navbar-logo">Work<span>Forge</span>.</a>
+    <div class="navbar-nav">
+      <a href="index.html" id="beranda">Beranda</a>
+      <a href="pasanglowongankerja.html" id="pasang-lowongan">Pasang Lowongan Kerja</a>
+      <a href="carilowongankerja.html" id="cari-lowongan-kerja">Cari Lowongan Kerja</a>
+      <a href="navbar-tips-loker.html" id="navbar-tips-loker">Tips Loker</a>
+    </div>
+    <div class="navbar-buttons">
+      <button class="login"><a href="login.html">Login</a></button>
+      <button class="register"><a href="register.html">Register</a></button>
+    </div>
+  </nav>
+  <div class="content">
+    <div class="text">
+      <h1>Cari Lowongan Kerja</h1>
+      <hr />
+      <p>Beranda &gt; Cari Lowongan Kerja</p>
+    </div>
+  </div>
+  <section class="search-section">
+    <h1>Cari Lowongan Kerja</h1>
+    <p>Tenang saja, Temukan Pekerjaan Yang Anda Sukai Dengan WorkForge.</p>
+    <div class="search-bar">
+      <input type="text" placeholder="Masukkan nama pekerjaan" />
+      <input type="text" placeholder="Masukkan lokasi pekerjaan" />
+      <button>Cari Pekerjaan</button>
+    </div>
+  </section>
+  <section class="job-listings">
+    <div class="job-card">
+      <img src="img/logo-bsi.jpg" alt="Company Logo" />
+      <div class="job-details">
+        <h1>BANK SYARIAH INDONESIA</h1>
+        <h2>Administrasi</h2>
+        <h2>Gaji: 8jt-10jt</h2>
+        <p>Lokasi: Kediri | Full-Time</p>
+        <p>
+          Sebagai Staf Administrasi di Bank Syariah Indonesia (BSI), Anda akan
+          bertanggung jawab untuk mendukung operasional kantor cabang atau
+          divisi tertentu melalui pengelolaan dokumen, data, dan kegiatan
+          administratif lainnya yang menunjang keberhasilan bisnis bank.
+        </p>
+        <div class="job-buttons">
+          <button class="Pelajari" onclick="openLearnMorePopup()">Pelajari lebih lanjut</button>
+          <button class="lamar" onclick="openApplyPopup()">Lamar pekerjaan</button>
+        </div>
+      </div>
+    </div>
+    <div class="job-card">
+      <img src="img/logo-bsi.jpg" alt="Company Logo" />
+      <div class="job-details">
+        <h1>BANK SYARIAH INDONESIA</h1>
+        <h2>Administrasi</h2>
+        <h2>Gaji: 8jt-10jt</h2>
+        <p>Lokasi: Kediri | Full-Time</p>
+        <p>
+          Sebagai Staf Administrasi di Bank Syariah Indonesia (BSI), Anda akan
+          bertanggung jawab untuk mendukung operasional kantor cabang atau
+          divisi tertentu melalui pengelolaan dokumen, data, dan kegiatan
+          administratif lainnya yang menunjang keberhasilan bisnis bank.
+        </p>
+        <div class="job-buttons">
+          <button class="Pelajari" onclick="openLearnMorePopup()">Pelajari lebih lanjut</button>
+          <button class="lamar" onclick="openApplyPopup()">Lamar pekerjaan</button>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="learnMorePopup" style="display: none;">
+      <div class="popup-content">
+        <h2>Apakah Anda ingin mengetahui lebih lanjut tentang pekerjaan ini?</h2>
+        <div class="button-container">
+          <button class="button-iya" onclick="lihatDetailPekerjaan()">Iya</button>
+          <button class="button-tidak" onclick="batalPelajari()">Tidak</button>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="applyPopup" style="display: none;">
+      <div class="popup-content">
+        <h2>Apakah Anda ingin melamar pekerjaan ini?</h2>
+        <div class="button-container">
+          <button class="button-iya" onclick="lamarPekerjaan()">Iya</button>
+          <button class="button-tidak" onclick="batalLamaran()">Tidak</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>Kontak kami</p>
+    <p>
+      Masih ada pertanyaan? Hubungi kami untuk bantuan lebih lanjut terkait akun
+      atau proses lamaran.
+    </p>
+    <a href="#" class="contact-link">Klik di sini untuk menghubungi!!</a>
+  </footer>
+   <script>
+  function openLearnMorePopup() {
+    document.getElementById("learnMorePopup").style.display = "flex";
+  }
+  function openApplyPopup() {
+    document.getElementById("applyPopup").style.display = "flex";
+  }
+  function lamarPekerjaan() {
+    window.location.href = "lamaran.html"; 
+  }
+  function lihatDetailPekerjaan() {
+    window.location.href = "pelajari.html"; 
+  }
+  function batalLamaran() {
+    document.getElementById("applyPopup").style.display = "none";
+  }
+  function batalPelajari() {
+    document.getElementById("learnMorePopup").style.display = "none";
+  }
+</script>
+</body>
+</html>

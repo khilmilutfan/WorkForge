@@ -1,0 +1,265 @@
+:root {
+  --primary: #f71414;
+  --bg: #010101;
+  --rg: #1709bb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #fff;
+  display: flex;
+  flex-direction: column; /* Membuat tata letak vertikal */
+}
+
+body {
+  flex-grow: 1; /* Membuat body mengambil ruang yang tersisa */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: rgb(1, 1, 1);
+  border-bottom: 1px solid #512c28;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar-buttons {
+  display: flex;
+  gap: 1rem;
+  color: #ffffff;
+}
+
+.navbar-buttons .login {
+  background-color: red;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.navbar-buttons .login a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-buttons .register {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar-buttons .register a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-buttons .login:hover {
+  background-color: blue;
+}
+
+.navbar-buttons .register:hover {
+  background-color: red;
+}
+
+/* Content */
+.content {
+  background-image: url("../img/pasang\ lowongan.jpg"); /* Ganti URL dengan gambar Anda */
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  padding: 100px;
+  position: relative;
+  color: white;
+  margin-top: 65px;
+}
+
+.content .text {
+  position: relative;
+  max-width: 600px;
+}
+
+.content h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.content hr {
+  border: 0;
+  height: 1px;
+  background: white;
+  margin: 10px 0;
+}
+
+.content p {
+  font-size: 14px;
+  color: #f0f0f0;
+}
+
+/* Card */
+.card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #faf3f3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-image img {
+  width: 600px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.card-content {
+  max-width: 600px;
+}
+
+.card-content h2 {
+  color: orange;
+  margin: 0;
+}
+
+.card-content h3 {
+  color: #333;
+  font-size: 20px;
+}
+
+.card-content p {
+  margin: 10px 0;
+  color: #676464;
+}
+
+.card-content .login {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: orange;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.card-content .login:hover {
+  background-color: rgb(0, 8, 248);
+}
+
+.card-content .register {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(0, 8, 248);
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.card-content .register:hover {
+  background-color: darkorange;
+}
+
+/* Footer */
+footer {
+  background-color: rgb(1, 1, 1);
+  color: white;
+  text-align: center;
+  opacity: 90%;
+  padding: 20px;
+  width: 100%;
+  margin-top: 20px; /* Menjaga jarak antara card dan footer */
+}
+
+footer p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+footer .contact-link {
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Untuk memastikan footer berada di bawah konten */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex-grow: 1; /* Membuat konten mengambil ruang yang tersisa */
+}

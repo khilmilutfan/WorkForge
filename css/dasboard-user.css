@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 240px;
+  background: #3f1b1b;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active {
+  width: 60px;
+}
+
+
+.sidebar .logo-details {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: flex-start;
+}
+
+.sidebar .logo-details i {
+  font-size: 28px;
+  font-weight: 500;
+  color: #fff;
+  min-width: 60px;
+  text-align: left;
+}
+
+.sidebar .logo-details .logo_name {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  font-style: italic;
+  text-align: left;
+}
+
+
+.sidebar .logo-details .logo_name span {
+  color: red;
+}
+
+.sidebar .nav-links {
+  margin-top: 10px;
+}
+
+.sidebar .nav-links li {
+  position: relative;
+  list-style: none;
+  height: 50px;
+}
+
+.sidebar .nav-links li a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li a.active {
+  background: #3f1b1b;
+}
+
+.sidebar .nav-links li a:hover {
+  background: #212020;
+}
+
+.sidebar .nav-links li i {
+  min-width: 60px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+.sidebar .nav-links li a .links_name {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.sidebar.active .logo-details .logo_name {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sidebar .logo-details .logo_name {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
+.home-section {
+  position: relative;
+  background: #f5f5f5;
+  min-height: 100vh;
+  width: calc(100% - 240px);
+  left: 240px;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active ~ .home-section {
+  width: calc(100% - 60px);
+  left: 60px;
+}
+
+.home-section nav {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background: #ffffff;
+  opacity: 75%;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - 240px);
+  left: 240px;
+  z-index: 100;
+  padding: 0 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+
+.sidebar.active ~ .home-section nav {
+  left: 60px;
+  width: calc(100% - 60px);
+}
+
+.home-section nav .sidebar-button {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+nav .sidebar-button i {
+  font-size: 35px;
+  margin-right: 10px;
+}
+
+.home-section nav .profile-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #b3c2c9;
+  border: 2px solid hsl(0, 87%, 3%);
+  border-radius: 50px;
+  height: 50px;
+  min-width: 190px;
+  padding-left: 60px;
+  position: relative;
+}
+
+.home-section nav .profile-details::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-image: url("../img/admin foto .jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.table-data {
+  text-align: center;
+  border-collapse: collapse;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-data img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 8px 16px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.btn-edit {
+  background-color: #113be4;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+  background-color: #010101;
+}
+
+nav .profile-details .admin_name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+}
+
+.home-section .home-content {
+  position: relative;
+  padding-top: 104px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn {
+  background-color: #0416e1;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn-tambah {
+  margin: 10px 0;
+}
+
+.btn-simpan {
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #010101;
+}
+
+.table-data {
+  text-align: center;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 5px 20px;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 30px;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+.input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(148, 148, 148);
+}
+
+.snackbar {
+  visibility: hidden; 
+  max-width: 300px; 
+  width: 80%;
+  margin-left: -150px; 
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 10000; 
+  left: 50%;
+  top: 30px; 
+  font-size: 17px;
+}
+.snackbar.show {
+  visibility: visible; 
+  animation: fadein 0.5s, fadeout 0.5s 2.5s; 
+}
+@keyframes fadein {
+  from {
+    top: -50px;
+    opacity: 0;
+  } 
+  to {
+    top: 30px;
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    top: 30px;
+    opacity: 1;
+  }
+  to {
+    top: -50px;
+    opacity: 0;
+  } 
+}
+
+
+@media (max-width: 1240px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar.active {
+    width: 220px;
+  }
+
+  .home-section {
+    width: calc(100% - 60px);
+    left: 60px;
+  }
+
+  .sidebar.active ~ .home-section {
+    overflow: hidden;
+    left: 220px;
+  }
+
+  .home-section nav {
+    width: calc(100% - 60px);
+    left: 60px;
+  }
+
+  .sidebar.active ~ .home-section nav {
+    width: calc(100% - 220px);
+    left: 220px;
+  }
+}
+
+@media (max-width: 700px) {
+  nav .profile-details {
+    display: none !important;
+  }
+
+  .home-section nav .profile-details {
+    height: 50px;
+    min-width: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  .profile-details {
+    display: none !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    width: 0;
+  }
+
+  .sidebar.active {
+    width: 60px;
+  }
+
+  .home-section {
+    width: 100%;
+    left: 0;
+  }
+
+  .sidebar.active ~ .home-section {
+    left: 60px;
+    width: calc(100% - 60px);
+  }
+
+  .home-section nav {
+    width: 100%;
+    left: 0;
+  }
+
+  .sidebar.active ~ .home-section nav {
+    left: 60px;
+    width: calc(100% - 60px);
+  }
+} 
