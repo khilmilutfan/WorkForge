@@ -7,12 +7,12 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Sidebar */
+
 .sidebar {
   position: fixed;
   height: 100%;
   width: 240px;
-  background: #0701a9;
+  background: #0017c8;
   transition: all 0.5s ease;
 }
 
@@ -20,7 +20,7 @@
   width: 60px;
 }
 
-/* Logo Styling */
+
 .sidebar .logo-details {
   display: flex;
   align-items: center;
@@ -44,7 +44,7 @@
   text-align: left;
 }
 
-/* Highlight part of the logo */
+
 .sidebar .logo-details .logo_name span {
   color: red;
 }
@@ -69,8 +69,7 @@
 }
 
 .sidebar .nav-links li a.active {
-  background: #0701a9;
-    
+  background: #0017c8;
 }
 
 .sidebar .nav-links li a:hover {
@@ -103,7 +102,7 @@
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* Main Content */
+
 .home-section {
   position: relative;
   background: #f5f5f5;
@@ -177,7 +176,7 @@ nav .sidebar-button i {
   background-repeat: no-repeat;
 }
 
-/* Daftar Lowongan */
+
 .table-data {
   text-align: center;
   border-collapse: collapse;
@@ -287,32 +286,32 @@ td {
   border-radius: 10px;
   border: 1px solid rgb(148, 148, 148);
 }
-/* Snackbar CSS */
+
 .snackbar {
-  visibility: hidden; /* Tersembunyi secara default */
-  max-width: 300px; /* Atur lebar maksimum */
-  width: 80%; /* Lebar 80% dari kontainer */
-  margin-left: -150px; /* Setengah dari max-width untuk tengah */
+  visibility: hidden; 
+  max-width: 300px; 
+  width: 80%;
+  margin-left: -150px; 
   background-color: #333;
   color: #fff;
   text-align: center;
   border-radius: 2px;
   padding: 16px;
   position: fixed;
-  z-index: 10000; /* Z-index tinggi agar selalu di atas elemen lain */
+  z-index: 10000; 
   left: 50%;
-  top: 30px; /* Pindahkan snackbar ke atas */
+  top: 30px; 
   font-size: 17px;
 }
 .snackbar.show {
-  visibility: visible; /* Tampilkan snackbar */
-  animation: fadein 0.5s, fadeout 0.5s 2.5s; /* Animasi fade in dan out */
+  visibility: visible; 
+  animation: fadein 0.5s, fadeout 0.5s 2.5s; 
 }
 @keyframes fadein {
   from {
     top: -50px;
     opacity: 0;
-  } /* Mulai dari atas */
+  } 
   to {
     top: 30px;
     opacity: 1;
@@ -326,10 +325,10 @@ td {
   to {
     top: -50px;
     opacity: 0;
-  } /* Pergi ke atas */
+  } 
 }
 
-/* Responsive Media Query */
+
 @media (max-width: 1240px) {
   .sidebar {
     width: 60px;
@@ -405,4 +404,4 @@ td {
     left: 60px;
     width: calc(100% - 60px);
   }
-}
+} 
