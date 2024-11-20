@@ -12,7 +12,7 @@
 body {
   font-family: Arial, sans-serif;
   height: 115vh;
-  background-image: url(../img/login\ bg.jpg);
+  background-color: darkorange;
   position: relative;
   padding-top: 35px;
 }
