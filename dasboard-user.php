@@ -22,13 +22,13 @@
           </a>
         </li>
         <li>
-          <a href="daftar lowongan/daftar.php">
+          <a href="daftar-lowongan/daftar.php">
             <i class="bx bx-detail"></i>
-            <span class="links_name">Daftar Lowongan</span>
+            <span class="links_name">Tambah Lowongan</span>
           </a>
         </li>
         <li>
-          <a href="tips loker dasboard/tips.php">
+          <a href="tips-loker-dasboard/tips.php">
             <i class="bx bx-book"></i>
             <span class="links_name">Tips Loker</span>
           </a>

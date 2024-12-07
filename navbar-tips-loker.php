@@ -35,18 +35,22 @@
         <p>Beranda &gt; Tips Loker</p>
       </div>
     </div>
+    <?php
+      include 'koneksi.php';
+
+      $sql = "SELECT * FROM tb_tips";
+      $result = $conn->query($sql);
+      $baseUrl = 'http://localhost/workforge/';
+      ?>
     <section class="tips-listings">
+    <?php while ($row = $result->fetch_assoc()): ?>
       <div class="tips-card" style="position: relative">
-        <img src="img/pp tips.jpg" alt="Company Logo" />
+      <img src="<?= !empty($row['foto']) ? str_replace('../', '', $row['foto']) : 'img/default-logo.jpg' ?>" alt="Company Logo" />
+
         <div class="tips-details">
-          <h1>10 Aturan Tak Tertulis di Dunia Kerja</h1>
+          <h1><?= htmlspecialchars($row['nama']) ?></h1>
           <p>
-            Aturan tak tertulis di dunia kerja adalah seperangkat norma,
-            kebiasaan, dan harapan yang tidak tercantum secara eksplisit dalam
-            buku pedoman perusahaan, namun secara umum dipahami dan diikuti oleh
-            karyawan. Aturan ini terbentuk dari budaya perusahaan, interaksi
-            antar karyawan, serta pengalaman yang terakumulasi selama
-            bertahun-tahun.
+          <?= htmlspecialchars($row['tips_loker']) ?>
           </p>
           <div class="tips-buttons">
             <button class="lihat">Lihat selengkapnya ></button>
@@ -54,6 +58,7 @@
         </div>
         <i class="bi bi-bookmark save-icon" onclick="openPopup()"></i>
       </div>
+      <?php endwhile; ?>
     </section>
     <div class="popup" id="popup" style="display: none">
       <div class="popup-content">

@@ -1,3 +1,18 @@
+<?php
+// Mulai session
+session_start();
+
+// Periksa apakah admin_id ada di session (tanda bahwa user sudah login)
+if (!isset($_SESSION['admin_id'])) {
+    // Jika tidak ada, arahkan kembali ke halaman login
+    header("Location: login-perusahaan.php");
+    exit();
+}
+
+// Jika ada, lanjutkan ke dashboard
+echo "Selamat datang di Dashboard Perusahaan!";
+?>
+
 <!DOCTYPE html>
 <html lang="id">
   <head>
@@ -16,19 +31,19 @@
       </div>
       <ul class="nav-links">
         <li>
-          <a href="dasboard-user.php" class="active">
+          <a href="dasboard-perusahaan.php" class="active">
             <i class="bx bx-tachometer"></i>
             <span class="links_name">Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="lamaran.php">
+          <a href="tambah-lowongan.php">
             <i class="bx bx-file"></i>
-            <span class="links_name">Lamaran</span>
+            <span class="links_name">Tambah Lowongan</span>
           </a>
         </li>
         <li>
-          <a href="tips loker dasboard/tips.php">
+          <a href="">
             <i class="bx bx-book"></i>
             <span class="links_name">Tips Loker</span>
           </a>

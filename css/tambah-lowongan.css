@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 240px;
+  background: #0017c8;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active {
+  width: 60px;
+}
+
+.sidebar .logo-details {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.sidebar .logo-details .logo_name {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.sidebar .logo-details .logo_name span {
+  color: red;
+}
+
+.sidebar .nav-links {
+  margin-top: 10px;
+}
+
+.sidebar .nav-links li {
+  list-style: none;
+  height: 50px;
+}
+
+.sidebar .nav-links li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  height: 100%;
+  transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li a:hover {
+  background: #212020;
+}
+
+.sidebar .nav-links li i {
+  min-width: 60px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+.sidebar .nav-links li a .links_name {
+  color: #fff;
+  font-size: 15px;
+}
+
+.sidebar.active .logo-details .logo_name {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.home-section {
+  position: relative;
+  background: #f5f5f5;
+  min-height: 100vh;
+  width: calc(100% - 240px);
+  left: 240px;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active ~ .home-section {
+  width: calc(100% - 60px);
+  left: 60px;
+}
+
+.home-section nav {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background: #ffffff;
+  opacity: 75%;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - 240px);
+  left: 240px;
+  z-index: 100;
+  padding: 0 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+
+.sidebar.active ~ .home-section nav {
+  left: 60px;
+  width: calc(100% - 60px);
+}
+
+.home-section nav .sidebar-button {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+nav .sidebar-button i {
+  font-size: 35px;
+  margin-right: 10px;
+}
+
+.home-section nav .profile-details {
+  display: flex;
+  align-items: center;
+  background: #b3c2c9;
+  border-radius: 50px;
+  height: 50px;
+  min-width: 190px;
+  padding-left: 60px;
+  position: relative;
+}
+
+nav .profile-details .admin_name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Gaya untuk formulir tambah lowongan */
+form.form-lowongan {
+  background: #ffffff;
+  padding: 20px 30px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  color: #333;
+}
+
+form.form-lowongan h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0017c8;
+}
+
+form.form-lowongan label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #0017c8;
+}
+
+form.form-lowongan input,
+form.form-lowongan textarea,
+form.form-lowongan button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #b3c2c9;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form.form-lowongan input:focus,
+form.form-lowongan textarea:focus {
+  border: 1px solid #0017c8;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 23, 200, 0.5);
+}
+
+form.form-lowongan textarea {
+  resize: none;
+  height: 100px;
+}
+
+form.form-lowongan button {
+  background-color: #0017c8;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+form.form-lowongan button:hover {
+  background-color: #000db3;
+}
+
+/* Responsif */
+@media (max-width: 1240px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .home-section {
+    width: calc(100% - 60px);
+    left: 60px;
+  }
+
+  .sidebar.active ~ .home-section {
+    left: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  form.form-lowongan {
+    width: 90%;
+    padding: 15px;
+  }
+
+  form.form-lowongan h2 {
+    font-size: 20px;
+  }
+
+  form.form-lowongan button {
+    padding: 10px;
+  }
+}

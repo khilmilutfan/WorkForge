@@ -32,57 +32,25 @@
           </div>
           <div class="form-box">
             <h2>Registrasi</h2>
-            <form class="registrasi-form"id="registrasiForm"onsubmit="handleRegister(event)">
-              <div class="input-group">
-                <label for="Nama penanggung jawab">Nama penanggung jawab</label>
-                <input
-                  type="text"
-                  id="Nama penanggung jawab"
-                  name="Nama penanggung jawab"
-                  placeholder="Masukkan Nama penanggung jawab"
-                  required
-                />
-              </div>
-              <div class="input-group">
-                <label for="No Telepon perusahaan">No Telepon perusahaan</label>
-                <input
-                  type="text"
-                  id="No Telepon perusahaan"
-                  name="No Telepon perusahaan"
-                  placeholder="Masukkan No Telepon perusahaan"
-                  required
-                />
-              </div>
-              <div class="input-group">
-                <label for="email perusahaan">Email perusahaan</label>
-                <input
-                  type="email"
-                  id="email perusahaan"
-                  name="email perusahaan"
-                  placeholder="Masukkan email perusahaan"
-                  required
-                />
-              </div>
-              <div class="input-group">
-                <label for="password">Password</label>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  placeholder="Masukkan password"
-                  required
-                />
-              </div>
-              <button type="submit" class="registrasi-btn">Registrasi</button>
-              <p>
-                Sudah mempunyai akun WorkForge?
-                <a href="login-perusahaan.php">Login sekarang</a>
-              </p>
-            </form>
-          </div>
-        </div>
-      </main>
+            <form class="registrasi-form" id="registrasiForm" action="proses-registrasi-perusahaan.php" method="POST">
+    <div class="input-group">
+        <label for="username">Nama admin</label>
+        <input type="text" id="username" name="username" placeholder="Masukkan Nama admin" required />
     </div>
+    <div class="input-group">
+        <label for="email">Email Perusahaan</label>
+        <input type="email" id="email" name="email" placeholder="Masukkan Email Perusahaan" required />
+    </div>
+    <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Masukkan Password" required />
+    </div>
+       <button type="submit" class="registrasi-btn">Registrasi</button>
+       </form>
+      </div>
+    </div>
+  </main>
+</div>
     <footer>
       <p>Kontak kami</p>
       <p>
@@ -91,14 +59,5 @@
       </p>
       <a href="#" class="contact-link">Klik di sini untuk menghubungi!!</a>
     </footer>
-    <script>
-        function handleRegister(event) {
-          event.preventDefault(); // Mencegah form submit secara default
-          // Simpan status register ke localStorage
-          localStorage.setItem("registrasiSuccess", "true");
-          // Redirect ke halaman dashboard
-          window.location.href = "dasboard-perusahaan.php";
-        }
-      </script>
   </body>
 </html>

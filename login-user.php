@@ -27,10 +27,10 @@
           </div>
           <div class="form-box">
             <h2>Login</h2>
-            <form class="login-form" id="loginForm" onsubmit="handleLogin(event)">
+            <form class="login-form" action="login-proses-user.php" method="POST" id="loginForm" onsubmit="handleLogin(event)">
               <div class="input-group">
                 <label for="email user">Email</label>    
-                <input type="email user" id="email user" name="email user" placeholder="Masukkan email" required />
+                <input type="email user" id="email user" name="email" placeholder="Masukkan email" required />
               </div>
               <div class="input-group">
                 <label for="password">Password</label>
@@ -60,11 +60,11 @@
       <a href="#" class="contact-link">Klik di sini untuk menghubungi!!</a>
     </footer>
     <script>
-        function handleLogin(event) {
-          event.preventDefault(); 
-          localStorage.setItem("loginSuccess", "true");
-          window.location.href = "dasboard-user.php";
-        }
+        // function handleLogin(event) {
+          // event.preventDefault(); 
+          // localStorage.setItem("loginSuccess", "true");
+          // window.location.href = "dasboard-user.php";
+         //}
       </script>
-  </body>
+</body>
 </html>

@@ -20,10 +20,7 @@ body {
   background-color: #ffffff;
   color: #fff;
   display: flex;
-  flex-direction: column;
-}
-
-body {
+  flex-direction: column; 
   flex-grow: 1;
 }
 

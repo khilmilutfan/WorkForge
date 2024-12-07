@@ -73,45 +73,54 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </ul>
     </div>
   </section>
-  <section class="job-listings">
-    <div class="job-card">
-      <img src="img/logo-bsi.jpg" alt="Company Logo" />
-      <div class="job-details">
-        <h1>BANK SYARIAH INDONESIA</h1>
-        <h2>Administrasi</h2>
-        <h2>Gaji: 8jt-10jt</h2>
-        <p>Lokasi: Kediri | Full-Time</p>
-        <p>
-          Sebagai Staf Administrasi di Bank Syariah Indonesia (BSI), Anda akan
-          bertanggung jawab untuk mendukung operasional kantor cabang atau
-          divisi tertentu melalui pengelolaan dokumen, data, dan kegiatan
-          administratif lainnya yang menunjang keberhasilan bisnis bank.
-        </p>
-        <div class="job-buttons">
-          <button class="Pelajari" onclick="openPopup('learnMorePopup')">Pelajari lebih lanjut</button>
-          <button class="lamar" onclick="openPopup('applyPopup')">Lamar pekerjaan</button>
+  <?php
+include 'koneksi.php';
+
+$sql = "SELECT * FROM tb_lowongan";
+$result = $conn->query($sql);
+?>
+
+<section class="job-listings">
+    <?php while ($row = $result->fetch_assoc()): ?>
+        <div class="job-card">
+        <img src="<?= !empty($row['foto']) ? str_replace('../', '', $row['foto']) : 'img/default-logo.jpg' ?>" alt="Company Logo" />
+            <div class="job-details">
+                <h1><?= htmlspecialchars($row['perusahaan']) ?></h1>
+                <h2><?= htmlspecialchars($row['posisi']) ?></h2>
+                <h2>Gaji: <?= htmlspecialchars(number_format($row['gaji_minimal'])) ?> - <?= htmlspecialchars(number_format($row['gaji_maksimal'])) ?></h2>
+                <p>Lokasi: <?= htmlspecialchars($row['lokasi']) ?> | <?= htmlspecialchars($row['tipe_pekerjaan']) ?></p>
+                <p><?= htmlspecialchars($row['deskripsi']) ?></p>
+                <div class="job-buttons">
+                    <button class="Pelajari" onclick="openPopup('learnMorePopup-<?= $row['id'] ?>')">Pelajari lebih lanjut</button>
+                    <button class="lamar" onclick="openPopup('applyPopup-<?= $row['id'] ?>')">Lamar pekerjaan</button>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="popup" id="learnMorePopup" style="display: none;">
-      <div class="popup-content">
-        <h2>Apakah Anda ingin mengetahui lebih lanjut tentang pekerjaan ini?</h2>
-        <div class="button-container">
-          <button class="button-iya" onclick="redirectTo('pelajari.php')">Iya</button>
-          <button class="button-tidak" onclick="closePopup('learnMorePopup')">Tidak</button>
+
+        <!-- Popup untuk "Pelajari lebih lanjut" -->
+        <div class="popup" id="learnMorePopup-<?= $row['id'] ?>" style="display: none;">
+            <div class="popup-content">
+                <h2>Apakah Anda ingin mengetahui lebih lanjut tentang pekerjaan ini?</h2>
+                <div class="button-container">
+                    <button class="button-iya" onclick="redirectTo('pelajari.php?id=<?= $row['id'] ?>')">Iya</button>
+                    <button class="button-tidak" onclick="closePopup('learnMorePopup-<?= $row['id'] ?>')">Tidak</button>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="popup" id="applyPopup" style="display: none;">
-      <div class="popup-content">
-        <h2>Apakah Anda ingin melamar pekerjaan ini?</h2>
-        <div class="button-container">
-          <button class="button-iya" onclick="handleApply()">Iya</button>
-          <button class="button-tidak" onclick="closePopup('applyPopup')">Tidak</button>
+
+        <!-- Popup untuk "Lamar pekerjaan" -->
+        <div class="popup" id="applyPopup-<?= $row['id'] ?>" style="display: none;">
+            <div class="popup-content">
+                <h2>Apakah Anda ingin melamar pekerjaan ini?</h2>
+                <div class="button-container">
+                    <button class="button-iya" onclick="handleApply('<?= $row['id'] ?>')">Iya</button>
+                    <button class="button-tidak" onclick="closePopup('applyPopup-<?= $row['id'] ?>')">Tidak</button>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    <?php endwhile; ?>
+</section>
+
   <footer>
     <p>Kontak kami</p>
     <p>

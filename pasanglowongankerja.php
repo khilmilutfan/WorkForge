@@ -41,10 +41,10 @@
           kerja. Silahkan Login ke akun anda atau jika anda belum memiliki akun,
           silakan registrasi terlebih dahulu.
         </p>
-        <a href="login-perusahaan.php">
+        <a href="login-user.php">
           <button class="login">Login Perusahaan</button>
         </a>
-        <a href="registrasi-perusahaan.php">
+        <a href="register-user.php">
           <button class="register">Registrasi Perusahaan</button>
         </a>        
       </div>

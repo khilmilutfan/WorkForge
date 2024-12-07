@@ -31,24 +31,14 @@
           </div>
           <div class="form-box">
             <h2>Registrasi</h2>
-            <form class="registrasi-form"id="registrasiForm"onsubmit="handleRegister(event)">
+            <form action = "register-proses-user.php" method="POST" class="registrasi-form"id="registrasiForm"onsubmit="handleRegister(event)">
               <div class="input-group">
                 <label for="Nama user">Nama</label>
                 <input
                   type="text"
                   id="Nama user"
-                  name="Nama user"
+                  name="username"
                   placeholder="Masukkan Nama"
-                  required
-                />
-              </div>
-              <div class="input-group">
-                <label for="No Telepon">No Telepon</label>
-                <input
-                  type="text"
-                  id="No Telepon"
-                  name="No Telepon"
-                  placeholder="Masukkan No Telepon"
                   required
                 />
               </div>
@@ -57,7 +47,7 @@
                 <input
                   type="email"
                   id="email user"
-                  name="email user"
+                  name="email"
                   placeholder="Masukkan email"
                   required
                 />
@@ -91,13 +81,11 @@
       <a href="#" class="contact-link">Klik di sini untuk menghubungi!!</a>
     </footer>
     <script>
-        function handleRegister(event) {
-          event.preventDefault(); // Mencegah form submit secara default
-          // Simpan status register ke localStorage
-          localStorage.setItem("registrasiSuccess", "true");
-          // Redirect ke halaman dashboard
-          window.location.href = "dasboard-user.php";
-        }
+        // function handleRegister(event) {
+        //   event.preventDefault();
+        //   localStorage.setItem("registrasiSuccess", "true");
+        //   window.location.href = "dasboard-user.php";
+        // }
       </script>
   </body>
 </html>
