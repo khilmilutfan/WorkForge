@@ -1,0 +1,1 @@
+<?php /**PATH C:\laragon\www\WorkForge\resources\views/tips/edit.blade.php ENDPATH**/ ?>
